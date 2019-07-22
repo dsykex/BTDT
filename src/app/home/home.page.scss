@@ -1,1 +1,43 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
 
+.content{
+    text-align:center;
+    width:100%;
+    z-index: 2;
+}
+
+.post-content{
+    padding:15px;
+}
+
+.logo-area
+{
+    background:linear-gradient(to bottom, rgba(255,243,153,1) 0%, rgba(196,32,65,0) 100%);
+    text-align: center;
+    padding:10px;
+    
+}
+
+section{
+    display:flex;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bg-gradient
+{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    min-width:100%;
+    background: linear-gradient(90deg, rgba(255,243,153,1) -80%, rgba(196,32,65,1) 180%);
+    z-index: 1;
+    
+}

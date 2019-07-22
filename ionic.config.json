@@ -1,5 +1,7 @@
 {
   "name": "btdt",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
