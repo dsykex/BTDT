@@ -1,3 +1,5 @@
+$primaryColor: rgb(196, 32, 65);
+
 *{
     padding:0;
     margin:0;
@@ -6,20 +8,29 @@
 
 .content{
     text-align:center;
-    width:100%;
-    z-index: 2;
+    width:80%;
 }
 
-.post-content{
-    padding:15px;
+.errorMsg {
+    margin-top:10px;
+}
+
+.userArea{
+    display: none;
 }
 
 .logo-area
 {
-    background:linear-gradient(to bottom, rgba(255,243,153,1) 0%, rgba(196,32,65,0) 100%);
     text-align: center;
     padding:10px;
-    
+}
+
+ion-content{
+    --background:none;
+}
+
+.hidden{
+    display:none;
 }
 
 section{
@@ -37,7 +48,6 @@ section{
     left:0;
     height:100vh;
     min-width:100%;
-    background: linear-gradient(90deg, rgba(255,243,153,1) -80%, rgba(196,32,65,1) 180%);
-    z-index: 1;
-    
+    background: linear-gradient(45deg, rgba(255,243,153,1) -90%, rgba(255,255,255,1) 120%);
+    z-index: -1;
 }

@@ -1,24 +1,32 @@
+<!--<ion-header>
+  <ion-title class="text-center">
+    <img src="../../assets/logo.png" width="90" height="45" />
+  </ion-title>
+</ion-header>-->
 
-<ion-content translucent="true">
-  <section>
-    <div class="content">
-        <div class="logo-area">
-            <img src="../../assets/logo.png" width="150" height="60" class="logo"/>
-        </div><br><br>
-        <div class="post-content">
-          <ion-button size="full" ><ion-icon color="secondary" name="camera"></ion-icon></ion-button>
-          <ion-textarea style="background:#fff; padding:5px; border-radius:10px; text-align: left; margin-top:10px;" [(ngModel)]="post.desc" rows="9" placeholder="Say something about your post."></ion-textarea>
-        </div>
+  <ion-content>
+    <div #hidden class="hidden">
+    <section #section>
+      <div #content class="content">
+          <div #logo class="logo-area">
+              <img src="../../assets/logo.png" width="150" height="60" class="logo"/>
+          </div><br>
+          <div #userarea class="userArea">
+              <ion-item>
+                <ion-input type="email" clearInput inputmode="email" [(ngModel)]="user.email" placeholder="Email"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input type="password" clearInput inputmode="password" [(ngModel)]="user.password" placeholder="Password"></ion-input>
+              </ion-item>
+              
+          </div><br><br>
+          <div #loginBtn>
+            <ion-button expand="full" size="large" (click)="login()">Login</ion-button>
+            <ion-button expand="full" (click)="signupPanel()">Create an account</ion-button>
+          </div>
+          <p class="errorMsg">{{errorMsg}}</p>
+      </div>
+    </section>
+    <div #bg class="bg-gradient"></div>
     </div>
-  </section>
-  <div class="bg-gradient"></div>
-</ion-content>
-<ion-footer>
-  <ion-grid>
-    <ion-row>
-      <ion-col col-6>
-        <ion-button size="full">Post</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-footer>
+  </ion-content>
