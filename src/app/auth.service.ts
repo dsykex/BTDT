@@ -2,9 +2,6 @@ import { Injectable } from '@angular/core';
 import * as firebase from '../fb';
 import { Observable } from 'rxjs';
 
-export interface tvarr {
-  user: string;
-}
 
 @Injectable({
   providedIn: 'root'
@@ -20,10 +17,11 @@ export class AuthService {
         else
         {
           let db = firebase.default.firestore().collection('users');
-          db.doc(authData.email).get().then(user => { 
-            if(user.exists)
-              resolve(user.data());
-          })
+          db.where('email', '==', authData.email).get().then(_user => {
+            _user.docs.forEach(u => {
+              resolve(u.data());
+            });
+          });
         }
       })
     });

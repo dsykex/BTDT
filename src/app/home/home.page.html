@@ -18,11 +18,10 @@
               <ion-item>
                 <ion-input type="password" clearInput inputmode="password" [(ngModel)]="user.password" placeholder="Password"></ion-input>
               </ion-item>
-              
           </div><br><br>
           <div #loginBtn>
             <ion-button expand="full" size="large" (click)="login()">Login</ion-button>
-            <ion-button expand="full" (click)="signupPanel()">Create an account</ion-button>
+            <ion-button expand="full" style="margin-top:7px;" fill="clear" (click)="signupPanel()">Create an account</ion-button>
           </div>
           <p class="errorMsg">{{errorMsg}}</p>
       </div>

@@ -1,9 +1,65 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>profile</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div #header>
+  <ion-header translucent="true">
+    <ion-toolbar>
+      <ion-title class="text-center"><img src="../../assets/logo.png" alt="" width="90" height="50" /></ion-title> 
+    </ion-toolbar> 
 
+    <ion-toolbar>
+        <ion-segment mode="md">
+          <ion-segment-button value="camera">
+            <ion-icon name="checkbox"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button>
+            <ion-icon name="flame"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button>
+            <ion-icon name="people"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button (click)="logoutConfirm()">
+            <ion-icon name="log-out"></ion-icon>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>      
+  </ion-header>
+</div>
 <ion-content>
-
+  <ion-slides pager scrollbar>
+    <ion-slide>
+        <div class="content" *ngIf="user.email">
+          <div class="user-info text-center">
+            <img class="avatar" src="../../assets/media/img/dsykes.jpg"/>
+            <h2 class="display-name">{{user.display_name}}</h2>
+            <p>You cant phase me! bitch pay me! #BarRaiser #SykesCreatives</p>
+          </div>
+          <hr>
+          <ion-item>
+              <p>Drops</p>
+              <ion-badge slot="end">13</ion-badge>
+          </ion-item>
+          <ion-item>
+              <p>Followers</p>
+              <ion-badge slot="end">20,000</ion-badge>
+          </ion-item> 
+          <ion-item>
+              <p>Stats</p>
+          </ion-item>     
+        </div>      
+    </ion-slide>
+    <ion-slide>
+      <div class="content">
+        <h2>Whats Trending?</h2>
+        <div class="video-container">
+          <video autoplay class="fullscreen-video" controls>
+              <source src="../../assets/media/vid/test.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="content">
+        <h2>People I like</h2>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <div class="bg-gradient"></div>
 </ion-content>
